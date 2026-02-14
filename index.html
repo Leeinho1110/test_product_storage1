@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko">
+<html lang="ko" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +8,13 @@
   </head>
   <body>
     <main class="container">
-      <h1>로또 번호 추첨기</h1>
+      <header class="header-row">
+        <h1>로또 번호 추첨기</h1>
+        <button id="theme-toggle" type="button" class="theme-toggle" aria-label="다크 모드 전환">
+          🌙 다크 모드
+        </button>
+      </header>
+
       <p class="description">1~45 사이 번호 6개를 중복 없이 추첨합니다.</p>
 
       <section class="controls" aria-label="추첨 설정">

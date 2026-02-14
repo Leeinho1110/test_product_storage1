@@ -2,9 +2,11 @@ const LOTTO_MIN = 1;
 const LOTTO_MAX = 45;
 const LOTTO_SIZE = 6;
 
+const root = document.documentElement;
 const countInput = document.getElementById("count");
 const drawButton = document.getElementById("draw-button");
 const resultList = document.getElementById("result-list");
+const themeToggle = document.getElementById("theme-toggle");
 
 function drawLottoNumbers() {
   const pool = Array.from({ length: LOTTO_MAX - LOTTO_MIN + 1 }, (_, idx) => idx + LOTTO_MIN);
@@ -54,5 +56,18 @@ function onDrawClick() {
   renderResults(count);
 }
 
+function applyTheme(theme) {
+  root.setAttribute("data-theme", theme);
+  themeToggle.textContent = theme === "dark" ? "☀️ 라이트 모드" : "🌙 다크 모드";
+}
+
+function toggleTheme() {
+  const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+  applyTheme(next);
+}
+
 drawButton.addEventListener("click", onDrawClick);
+themeToggle.addEventListener("click", toggleTheme);
+
+applyTheme("light");
 renderResults(1);
