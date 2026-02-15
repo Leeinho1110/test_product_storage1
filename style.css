@@ -146,3 +146,10 @@ button:hover { background: var(--button-bg-hover); }
 .partner-form button {
   justify-self: start;
 }
+
+
+.comments-section {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
