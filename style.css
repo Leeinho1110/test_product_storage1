@@ -64,14 +64,24 @@ h1, h2 { margin-top: 0; }
   flex-wrap: wrap;
 }
 
-input[type="number"] {
-  width: 120px;
+input[type="number"],
+input[type="email"],
+textarea {
+  width: 100%;
   padding: 8px 10px;
   border: 1px solid var(--input-border);
   border-radius: 8px;
   font-size: 1rem;
   background: var(--surface);
   color: var(--text);
+}
+
+#count {
+  width: 120px;
+}
+
+textarea {
+  resize: vertical;
 }
 
 button {
@@ -115,4 +125,24 @@ button:hover { background: var(--button-bg-hover); }
 .error {
   color: var(--error);
   font-weight: 600;
+}
+
+.partner-section {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.partner-description {
+  margin: 0 0 12px;
+  color: var(--subtext);
+}
+
+.partner-form {
+  display: grid;
+  gap: 10px;
+}
+
+.partner-form button {
+  justify-self: start;
 }
